@@ -1,5 +1,13 @@
 # Landing page · Corso di lingua italiana dal portoghese
 
+## Dove si trova tutto (online dal 9 novembre 2026)
+
+- **Pagina pubblica:** https://dzerbinati96.github.io/corso-italiano/
+- **Codice:** repository GitHub `dzerbinati96/corso-italiano` (ogni `git push` su `main` aggiorna il sito in circa un minuto)
+- **Iscrizioni:** Foglio Google "Iscrizioni corso italiano" (account d.zerbinati96@gmail.com), scheda **Iscrizioni**
+- **Script:** progetto Apps Script "Iscrizioni corso italiano" sullo stesso account, pubblicato come app web (accesso: Chiunque)
+- **Contatto WhatsApp in pagina:** +39 335 702 9609
+
 Pagina di iscrizione per il corso presentato alla Palavra Viva Church Milano.
 È un unico file (`index.html`) più le foto in `assets/`: niente da installare, si apre con un doppio clic.
 
