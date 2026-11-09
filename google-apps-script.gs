@@ -13,6 +13,9 @@
 
 const SHEET_NAME = 'Iscrizioni';
 const NOTIFY_EMAIL = ''; // es. 'segreteria@palavraviva.it' — vuoto = nessuna email
+// Solo se lo script NON è stato aperto da Estensioni → Apps Script del foglio:
+// incolla qui l'ID del foglio (la parte dell'URL tra /d/ e /edit).
+const SHEET_ID = '';
 
 const HEADERS = [
   'Data iscrizione', 'Nome e cognome', 'Livello dichiarato', 'WhatsApp', 'Email',
@@ -60,7 +63,7 @@ function doPost(e) {
           'Note: ' + (data.note || '—'),
           'Quota: €' + data.quota,
           '',
-          'Foglio: ' + SpreadsheetApp.getActiveSpreadsheet().getUrl()
+          'Foglio: ' + spreadsheet_().getUrl()
         ].join('\n')
       });
     }
@@ -78,7 +81,7 @@ function doGet() {
 }
 
 function getSheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = spreadsheet_();
   let sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(HEADERS);
@@ -88,6 +91,10 @@ function getSheet_() {
     sheet.setColumnWidth(3, 260);
   }
   return sheet;
+}
+
+function spreadsheet_() {
+  return SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
 }
 
 // Taglia i testi troppo lunghi ed evita che un valore venga interpretato come formula (es. "+39…", "=…").
