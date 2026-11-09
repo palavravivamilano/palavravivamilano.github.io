@@ -2,8 +2,8 @@
 
 ## Dove si trova tutto (online dal 9 novembre 2026)
 
-- **Pagina pubblica:** https://dzerbinati96.github.io/corso-italiano/
-- **Codice:** repository GitHub `dzerbinati96/corso-italiano` (ogni `git push` su `main` aggiorna il sito in circa un minuto)
+- **Pagina pubblica:** https://palavravivamilano.github.io/
+- **Codice:** repository GitHub `palavravivamilano/palavravivamilano.github.io` (organizzazione gratuita della chiesa) (ogni `git push` su `main` aggiorna il sito in circa un minuto)
 - **Iscrizioni:** Foglio Google "Iscrizioni corso italiano" (account d.zerbinati96@gmail.com), scheda **Iscrizioni**
 - **Script:** progetto Apps Script "Iscrizioni corso italiano" sullo stesso account, pubblicato come app web (accesso: Chiunque)
 - **Contatto WhatsApp in pagina:** +39 335 702 9609
